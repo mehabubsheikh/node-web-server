@@ -52,6 +52,15 @@ app.get('/about',(req,res) =>{
 
 });
 
+app.get('/project',(req,res,next) =>{
+  res.render('project.hbs',{
+    pageTitle:'Projects Page',
+    currentYear: new Date().getFullYear(),
+    projectMessage:'You are in Projects Page'
+  });
+
+});
+
 app.get('/bad',(req,res) =>{
   res.send ({
     errorMessage:'Unable to hnadle'
